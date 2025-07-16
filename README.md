@@ -1,4 +1,4 @@
-# TrustGuard - Secure Escrow System (MERN Stack)
+# TrustGuard - Secure Middleman Service (MERN Stack)
 
 ![MERN](https://img.shields.io/badge/Stack-MERN-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue)
