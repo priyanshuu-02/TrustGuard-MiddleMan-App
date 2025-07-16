@@ -1,5 +1,9 @@
 # TrustGuard - Secure Escrow System (MERN Stack)
 
+![MERN](https://img.shields.io/badge/Stack-MERN-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue)
+![Contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
+
 **TrustGuard** is a secure and user-friendly **escrow system** built with the **MERN stack** (MongoDB, Express.js, React, Node.js).  
 It ensures safe transactions between two parties by holding funds until both parties fulfill their obligations.
 
@@ -88,6 +92,20 @@ cd ../client
 npm install
 npm start
 ```
+## ✅ Future Enhancements
+- Payment Gateway Integration
+- Real-time Notifications
+- Admin Panel for Monitoring Deals
+
+## 🤝 Contributing
+Contributions are welcome! Fork the repo and create a pull request.
+
+## 📜 License
+This project is licensed under the MIT License.
+
+## ⭐ Show Your Support
+If you like this project, please star the repository!
+
 
 
 
