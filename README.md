@@ -33,6 +33,7 @@ It ensures safe transactions between two parties by holding funds until both par
 ---
 
 ## 📂 Project Structure
+```bash
 TrustGuard/
 │
 ├── client/ # React frontend
@@ -52,6 +53,7 @@ TrustGuard/
 ├── .gitignore
 ├── README.md
 └── .env.example
+```
 ---
 
 ## ⚙️ Setup Instructions
