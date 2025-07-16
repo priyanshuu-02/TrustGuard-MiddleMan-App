@@ -4,7 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue)
 ![Contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)
 
-**TrustGuard** is a secure and user-friendly **escrow system** built with the **MERN stack** (MongoDB, Express.js, React, Node.js).  
+**TrustGuard** is a secure and user-friendly **middleman system** built with the **MERN stack** (MongoDB, Express.js, React, Node.js).  
 It ensures safe transactions between two parties by holding funds until both parties fulfill their obligations.
 
 ---
