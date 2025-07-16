@@ -62,6 +62,7 @@ git clone https://github.com/priyanshuu-02/TrustGuard-MiddleMan-App.git
 cd TrustGuard-MiddleMan-App
 ```
 ### 2. **Setup Backend**
+```bash
 cd server
 npm install
 
@@ -73,12 +74,14 @@ EMAIL_PASS=your_email_password
 
 **Start the Backend**
 npm start
+```
 
 ### 3. **Setup Frontend**
+```bash
 cd ../client
 npm install
 npm start
-
+```
 
 
 
