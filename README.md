@@ -65,14 +65,18 @@ cd TrustGuard-MiddleMan-App
 ```bash
 cd server
 npm install
+```
 
 **Create a .env file in server/:**
+```bash
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
+```
 
 **Start the Backend**
+```bash
 npm start
 ```
 
