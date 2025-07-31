@@ -18,7 +18,7 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/auth/login', {
+      const res = await axios.post('/auth/login', {
         identifier: form.identifier,
         password: form.password
       });
@@ -32,7 +32,7 @@ function Login() {
 
   const handleSendOtp = async () => {
     try {
-      await axios.post('/api/auth/send-otp', { identifier: form.identifier });
+      await axios.post('/auth/send-otp', { identifier: form.identifier });
       setOtpSent(true);
       setError('');
     } catch (err) {
@@ -43,7 +43,7 @@ function Login() {
   const handleOtpLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/auth/verify-otp', {
+      const res = await axios.post('/auth/verify-otp', {
         identifier: form.identifier,
         otp: form.otp
       });

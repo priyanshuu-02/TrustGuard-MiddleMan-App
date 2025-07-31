@@ -14,11 +14,11 @@ function MyDeals() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('/api/deals/my-buys')
+    axios.get('/deals/my-buys')
       .then(res => setBuyerDeals(res.data))
       .catch(err => setError('Failed to fetch buyer deals'));
 
-    axios.get('/api/deals/my-sells')
+    axios.get('/deals/my-sells')
       .then(res => setSellerDeals(res.data))
       .catch(err => setError('Failed to fetch seller deals'));
   }, []);
@@ -26,7 +26,7 @@ function MyDeals() {
   const handleVerifyOtp = async (dealId) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('/api/deals/verify-otp', {
+      const res = await axios.post('/deals/verify-otp', {
         dealId,
         otp: otpInputs[dealId]
       }, {
@@ -42,7 +42,7 @@ function MyDeals() {
   const handleResendOtp = async (dealId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post('/api/deals/resend-otp', { dealId }, {
+      await axios.post('/deals/resend-otp', { dealId }, {
         headers: { Authorization: token }
       });
       alert('🔁 OTP resent to seller');
@@ -62,8 +62,8 @@ function MyDeals() {
       }, 1000);
 
       const [buyRes, sellRes] = await Promise.all([
-        axios.get('/api/deals/my-buys'),
-        axios.get('/api/deals/my-sells')
+        axios.get('/deals/my-buys'),
+        axios.get('/deals/my-sells')
       ]);
       setBuyerDeals(buyRes.data);
       setSellerDeals(sellRes.data);
@@ -75,7 +75,7 @@ function MyDeals() {
   const handlePayment = async (dealId) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put(`/api/deals/${dealId}/pay`, {}, {
+      const res = await axios.put(`/deals/${dealId}/pay`, {}, {
         headers: { Authorization: token }
       });
       alert(res.data.message);
@@ -90,7 +90,7 @@ function MyDeals() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.delete(`/api/deals/${dealId}/delete`, {
+      const res = await axios.delete(`/deals/${dealId}/delete`, {
         headers: { Authorization: token }
       });
       alert(res.data.message);

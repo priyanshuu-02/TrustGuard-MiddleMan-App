@@ -19,7 +19,7 @@ function Dashboard() {
   }, [navigate]);
 
   useEffect(() => {
-    axios.get('/api/auth/profile')
+    axios.get('/auth/profile')
       .then(res => setUser(res.data))
       .catch(err => {
         setError('Access denied. Please log in.');
@@ -37,7 +37,7 @@ function Dashboard() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/api/deals/create', { itemName, amount, sellerUsername })
+    axios.post('/deals/create', { itemName, amount, sellerUsername })
       .then(() => {
         setDealStatus("✅ Deal submitted!");
         setItemName('');

@@ -21,7 +21,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/auth/signup', form);
+      const res = await axios.post('/auth/signup', form);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || '❌ Signup failed');

@@ -1,11 +1,12 @@
-// client/src/axios.js
 import axios from 'axios';
+const isLocalhost = window.location.hostname === 'localhost';
 
 const instance = axios.create({
-  baseURL: import.meta.env.MODE === 'development'
-    ? 'http://localhost:10000/api'
-    : 'https://trustguard-rqgf.onrender.com/api', // Change this to your actual backend URL
+  baseURL: isLocalhost
+    ? 'http://localhost:5000/api'
+    : 'https://trustguard-rqgf.onrender.com/api',
 });
+
 
 instance.interceptors.request.use(
   (config) => {
