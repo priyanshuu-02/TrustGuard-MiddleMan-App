@@ -94,7 +94,8 @@ function MyDeals() {
         headers: { Authorization: token }
       });
       alert(res.data.message);
-      window.location.reload();
+      navigate('/my-deals');
+      //window.location.reload();
     } catch (err) {
       alert(err.response?.data?.message || 'Failed to delete deal');
     }
