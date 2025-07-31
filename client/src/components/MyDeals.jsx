@@ -114,7 +114,7 @@ function MyDeals() {
       }
 
       try {
-        const endpoint = `/api/deals/${deal._id}/${type === 'shipped' ? 'mark-shipped' : 'mark-delivered'}`;
+        const endpoint = `/deals/${deal._id}/${type === 'shipped' ? 'mark-shipped' : 'mark-delivered'}`;
         const token = localStorage.getItem('token');
         await axios.put(endpoint, {}, {
           headers: { Authorization: token }
